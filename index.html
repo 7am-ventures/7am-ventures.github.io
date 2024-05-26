@@ -19,6 +19,9 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
 		<style type="text/css">
+			body {
+				margin: 0;
+			}
 			.main {
 				display: flex;
 				width: 100vw;
@@ -28,14 +31,38 @@
 			}
 			.content {
 				display: flex;
-				width: 64%;
-				height: 64%;
+				width: 24%;
+				height: 32%;
 			}
+			:root {
+				color-scheme: light dark;
+				--light-bg: #ffffff;
+				--light-color: #141412;
+				--light-logo: url(logo.png) no-repeat;
+				--dark-bg: #141412;
+				--dark-color: #ffffff;
+			}
+			* {
+				background-color: light-dark(var(--light-bg), var(--dark-bg));
+				color: light-dark(var(--light-color), var(--dark-color));
+			}
+			.light {
+				color-scheme: light;
+			}
+			.dark {
+				color-scheme: dark;
+			}
+			
 		</style>
 	</head>
 	<body>
 		<main class="main">
 			<div class="content">
+				<picture>
+					<source srcset="./img/Logo - White.svg" media="(prefers-color-scheme: dark)" />
+					<img src="./img/Logo - Black.svg" alt="7am Ventures" />
+				</picture>
+				
 				<img src="./img/Logo - Black.svg" width="100%" height="100%" loading="lazy" alt="7am Ventures">
 			</div>
 		</main>
