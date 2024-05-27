@@ -21,6 +21,13 @@
 		<style type="text/css">
 			body {
 				margin: 0;
+				color: #777570;
+				font-family: "DM Sans";
+				font-size: 1.5rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 2.25rem;
+				letter-spacing: 0.36px;
 			}
 			.main {
 				display: flex;
@@ -31,15 +38,19 @@
 			}
 			.content {
 				display: flex;
+				flex-direction: column;
+				row-gap: 2rem;
 				width: 24%;
-				height: 32%;
+				height: auto;
+				justify-content: center;
+				align-items: center;
 			}
 			:root {
 				color-scheme: light dark;
 				--light-bg: #ffffff;
-				--light-color: #141412;
+				--light-color: #777570;
 				--dark-bg: #141412;
-				--dark-color: #ffffff;
+				--dark-color: #D9D8D5;
 			}
 			* {
 				background-color: light-dark(var(--light-bg), var(--dark-bg));
@@ -57,10 +68,15 @@
 	<body>
 		<main class="main">
 			<div class="content">
-				<picture>
-					<source srcset="./img/Logo%20-%20White.svg" media="(prefers-color-scheme: dark)" />
-					<img src="./img/Logo - Black.svg" alt="7am Ventures" />
-				</picture>
+				<div class="logo">
+					<picture>
+						<source srcset="./img/Logo%20-%20White.svg" media="(prefers-color-scheme: dark)"/>
+						<img src="./img/Logo - Black.svg" alt="7am Ventures" width="100%" height="auto"/>
+					</picture>
+				</div>
+				<div class="text">
+					Coming Soon
+				</div>
 			</div>
 		</main>
 	</body>
